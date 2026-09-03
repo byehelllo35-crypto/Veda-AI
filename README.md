@@ -542,6 +542,40 @@ flowchart LR
 
 This section is for a local demonstration on a Windows computer. You do not need to understand the code to follow the sequence: install the tools, prepare private settings, load the data, start the two services, and open the website.
 
+### Quick start commands
+
+From the project root, install the website packages and start the website:
+
+`pnpm install`
+
+`pnpm dev`
+
+The website opens at `http://localhost:3000`.
+
+In a second terminal, move into the backend folder, install its packages, and start the backend:
+
+`cd backend`
+
+`npm install`
+
+`npm run dev`
+
+The backend normally runs at `http://localhost:5000`.
+
+To load or refresh the real datasets, run these commands from the backend folder:
+
+`npm run seed:universities`
+
+`npm run seed:scholarships`
+
+To confirm that the backend is running, open `http://localhost:5000/api/health`.
+
+For a production-style website check, use:
+
+`pnpm build`
+
+`pnpm start`
+
 ```mermaid
 flowchart LR
     Install[Install tools] --> Settings[Prepare private settings]
